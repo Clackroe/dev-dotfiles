@@ -1,0 +1,12 @@
+#!/bin/bash
+
+sudo pacman -S --noconfirm --needed git base-devel gimp go fzf
+
+if ! command -v yay 2> /dev/null; then
+git clone https://aur.archlinux.org/yay.git ~/yay
+
+cd ~/yay
+
+makepkg -si
+
+fi

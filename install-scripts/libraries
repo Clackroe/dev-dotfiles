@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sudo pacman -S --noconfirm ripgrep xclip 
+
+
+if [ -d "~/tools-personal/fzf" ]; then
+git clone https://github.com/junegunn/fzf.git ~/tools-personal/fzf
+
+~/tools-personal/fzf/install
+
+fi
