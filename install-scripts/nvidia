@@ -1,12 +1,5 @@
 #!/bin/bash
 
-sudo pacman -S --noconfirm --needed nvidia-utils egl-wayland libva-nvidia-driver
+sudo pacman -S --noconfirm --needed nvidia-utils egl-wayland # libva-nvidia-driver
 
 sudo pacman -S --noconfirm --needed xorg-xwayland wayland-protocols
-
-
-# Edit the /etc/mkinitcpio.conf file
-sed -i 's/MODULES=(.*)/MODULES=(\1 nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
-
-# Rebuild the initramfs
-sudo mkinitcpio -P

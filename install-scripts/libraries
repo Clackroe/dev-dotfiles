@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S --noconfirm ripgrep xclip 
+sudo pacman -S --noconfirm --needed ripgrep xclip 
 
 
 if [ -d "~/tools-personal/fzf" ]; then

@@ -19,14 +19,16 @@ def stowDirTo(stow_dir, target_dir):
             print(f"Linking {abs_target} -> {abs_source}")
             os.symlink(abs_source, abs_target)
 
-os.system(f"./install-scripts/basics")
+os.system(f"./install-scripts/basics &")
 
 for f in os.listdir("install-scripts"):
-    if f != "basics":
+    if f != "basics" or f != "end":
         os.system(f"./install-scripts/{f}")
 
+os.system(f"./install-scripts/end")
 
-STOW_DIRS = ["hyperland"]
+
+STOW_DIRS = ["hyperland", "swaync", "waybar"]
 
 for st in STOW_DIRS:
     print(f'Stowing {st}')

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S --noconfirm --needed git base-devel gimp go fzf
+sudo pacman -S --noconfirm --needed git base-devel gimp go fzf inotify-tools
 
 if ! command -v yay 2> /dev/null; then
 git clone https://aur.archlinux.org/yay.git ~/yay

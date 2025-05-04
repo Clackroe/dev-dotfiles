@@ -1,6 +1,7 @@
 #!/bin/bash
 
+sudo pacman -D dunst
 
-# sudo pacman -S --noconfirm 
+sudo pacman -S --noconfirm --needed swaync xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland waybar
 
-yay -S --noconfirm --needed google-chrome
+yay -S --noconfirm --needed google-chrome xwaylandvideobridge vesktop
